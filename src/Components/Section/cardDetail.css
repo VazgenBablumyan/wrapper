@@ -1,0 +1,10 @@
+.cardNumber{
+    font-size: 80px;
+    margin: auto;
+}
+.closeCard{
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    border-radius: 5px;
+}
