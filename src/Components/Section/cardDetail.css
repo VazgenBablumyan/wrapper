@@ -1,6 +1,7 @@
 .cardNumber{
     font-size: 80px;
     margin: auto;
+    display: block;
 }
 .closeCard{
     width: 30px;
