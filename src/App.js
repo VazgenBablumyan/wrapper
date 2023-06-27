@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import './App.css';
 import Section from './Components/Section/Section';
+import Report from './Components/Section/Report';
 
 const cards =[{
   id:1,
@@ -45,9 +47,13 @@ const cards =[{
 ]
 
 function App() {
+  const [showReport, setShowReport] = useState(false)
+  const handleClick =() => setShowReport(!showReport)
   return (
     <div className="App">
       <Section cards ={cards} />
+      <button className='report'onClick={handleClick}>Report</button>
+      {showReport ? <Report cards={cards} className="report"/>: null}
     </div>
   );
 }

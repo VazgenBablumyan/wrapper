@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import CardDetail from './CardDetail'
-import "./card.css"
 import ButtonShow from './ButtonShow'
+import "./card.css"
+
 
 
 export default function Card({ cards }) {
-    const [card, setCard] = useState(false)
+    const [, setCard] = useState(false)
+    const [, setCounter] = useState(0)
     const handleClick = (card) => {
-        console.log(card.show)
-        return setCard(card.show = !card.show)
+        setCard(card.show = !card.show)
+        return !card.show ? setCounter(card.counter+=1):null
+         
     }
     return cards.map((card) => {
         return (
